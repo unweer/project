@@ -6,6 +6,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/normalize.css">
     </head>
     <body>
         <header>
@@ -13,31 +15,31 @@
             <div class="header__info">
                 <h1 class="header__info_title">Юридическая самопомощь</h1>
                 <nav class="header__info_nav">
-                    <p class="header__info__nav_nav-item">Статьи</p>
-                    <p class="header__info__nav_nav-item">Шаблоны</p>
-                    <p class="header__info__nav_nav-item">Вопросы</p>
-                    <p class="header__info__nav_nav-item">Связаться с нами</p>
+                    <a class="header__info__nav_nav-item" href="#scales">Статьи</a>
+                    <a class="header__info__nav_nav-item" href="#note">Шаблоны</a>
+                    <a class="header__info__nav_nav-item" href="#questions">Вопросы</a>
+                    <a class="header__info__nav_nav-item" href="#response">Связаться с нами</a>
                 </nav>
             </div>
             <a href="auth.html"><img class="header_account-img" src="img/ic_account.svg" alt="icon account"></a>
         </header>
         <div class="services">
-            <div class="services__item">
+            <div id="scales"  class="services__item">
                 <img class="services__item_img" src="img/ic_scales.svg" alt="icon scales">
                 <p class="services__item_text">Актуальные статьи</p>
             </div>
 
-            <div class="services__item">
+            <div id="note"  class="services__item">
                 <img class="services__item_img" src="img/ic_note.svg" alt="icon note">
                 <p class="services__item_text">Шаблоны исков и обращений</p>
             </div>
 
-            <div class="services__item">
+            <div id="questions" class="services__item">
                 <img class="services__item_img" src="img/ic_question.svg" alt="icon question">
                 <p class="services__item_text">Ответы на самые популярные вопросы</p>
             </div>
         </div>
-        <div class="responce-form">
+        <div id="response" class="responce-form">
             <h2 class="responce-form__title">Остались вопросы?</h2>
             <form class="responce-form__form">
                 <input id="name" type="text" placeholder="Ваше имя" required>

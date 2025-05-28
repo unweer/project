@@ -1,0 +1,317 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    background: #FFF6FC;
+}
+
+header {
+    background: #FFC9F0;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.header_logo {
+    width: 130px;
+    height: 130px;
+    align-self: center;
+    display: flex;
+    border-radius: 25px;
+}
+
+.header__info {
+    align-self: center;
+}
+
+.header__info_title {
+    width: 100%;
+    font-family: "Advent Pro";
+    font-size: 80px;
+    margin: 10px;
+    text-align: center;
+}
+
+.header__info_nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.header__info__nav_nav-item {
+    font-family: "Advent Pro";
+    text-decoration: none;
+    color: #000;
+    font-size: 30px;
+}
+
+.header_account-img {
+    width: 50px;
+    height: 50px;
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.services__item_img {
+    width: 300px;
+    height: 300px;
+}
+
+.services__item_text {
+    font-family: "Advent Pro";
+    font-size: 50px;
+}
+
+
+.responce-form {
+    padding: 40px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-family: "Advent Pro";
+}
+
+.responce-form h2 {
+    font-size: 60px;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+.responce-form form input,
+.responce-form form textarea {
+    padding: 12px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: "Advent Pro";
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.responce-form form button {
+    background-color: #ffc0e0;
+    padding: 12px 24px;
+    width: 150px;
+    font-size: 16px;
+    border: none;
+    font-family: "Advent Pro";
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.responce-form form button:hover {
+    background-color: #f9a9cc;
+}
+
+.responce-form__form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+footer {
+    height: 200px;
+    background: #9B628B;
+}
+
+/* Затемнённый фон */
+.modal {
+  display: none; /* скрыто по умолчанию */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Само окно */
+.modal__content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  font-family: "Advent Pro", sans-serif;
+  font-size: 25px;
+}
+
+/* Крестик */
+.modal__content_close {
+  color: #888;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal__content_close:hover {
+  color: #000;
+}
+
+
+.services__item {
+  font-size: 2rem;
+  align-content: center;
+  position: relative;
+  display: flex;
+}
+
+.services__item::after,
+.services__item::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #ffc0e0, #9B628B);
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease-out;
+}
+
+.services__item::before {
+  top: -5px;
+  transform-origin: left;
+}
+
+.services__item:hover::after,
+.services__item:hover::before {
+  transform: scaleX(1);
+}
+
+
+@media (max-width: 1200px) {
+  .header__info_title {
+    font-size: 60px;
+  }
+
+  .header__info__nav_nav-item {
+    font-size: 24px;
+  }
+
+  .services__item_text {
+    font-size: 40px;
+  }
+
+  .responce-form__form {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header_logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+
+  .header__info_title {
+    font-size: 45px;
+  }
+
+  .header__info_nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header__info__nav_nav-item {
+    font-size: 20px;
+  }
+
+  .services__item {
+    margin-top: 100px;
+  }
+
+  .services__item_img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .services__item_text {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .responce-form h2 {
+    font-size: 40px;
+  }
+
+  .responce-form__form {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .responce-form form input,
+  .responce-form form textarea {
+    font-size: 14px;
+  }
+
+  .responce-form form button {
+    width: 100%;
+  }
+
+  .modal__content {
+    margin: 50% auto;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__info_title {
+    font-size: 32px;
+  }
+
+  .header__info__nav_nav-item {
+    font-size: 18px;
+  }
+
+  .services__item_img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .services__item_text {
+    font-size: 24px;
+  }
+
+  .responce-form h2 {
+    font-size: 32px;
+  }
+
+  footer {
+    height: auto;
+    padding: 20px;
+    text-align: center;
+  }
+}
