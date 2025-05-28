@@ -9,48 +9,48 @@
     </head>
     <body>
         <header>
-            <a href="index.html"><img src="img/logo.png" alt="header logo"></a>
-            <div>
-                <p>Юридическая самопомощь</p>
-                <nav>
-                    <p>Статьи</p>
-                    <p>Шаблоны</p>
-                    <p>Вопросы</p>
-                    <p>Связаться с нами</p>
+            <a href="index.html"><img class="header_logo" src="img/logo.png" alt="header logo"></a>
+            <div class="header__info">
+                <h1 class="header__info_title">Юридическая самопомощь</h1>
+                <nav class="header__info_nav">
+                    <p class="header__info__nav_nav-item">Статьи</p>
+                    <p class="header__info__nav_nav-item">Шаблоны</p>
+                    <p class="header__info__nav_nav-item">Вопросы</p>
+                    <p class="header__info__nav_nav-item">Связаться с нами</p>
                 </nav>
             </div>
-            <a href="auth.html"><img src="img/ic_account.svg" alt="icon account"></a>
+            <a href="auth.html"><img class="header_account-img" src="img/ic_account.svg" alt="icon account"></a>
         </header>
-        <div>
-            <div>
-                <img src="img/ic_scales.svg" alt="icon scales">
-                <p>Актуальные статьи</p>
+        <div class="services">
+            <div class="services__item">
+                <img class="services__item_img" src="img/ic_scales.svg" alt="icon scales">
+                <p class="services__item_text">Актуальные статьи</p>
             </div>
 
-            <div>
-                <img src="img/ic_note.svg" alt="icon note">
-                <p>Шаблоны исков и обращений</p>
+            <div class="services__item">
+                <img class="services__item_img" src="img/ic_note.svg" alt="icon note">
+                <p class="services__item_text">Шаблоны исков и обращений</p>
             </div>
 
-            <div>
-                <img src="img/ic_question.svg" alt="icon question">
-                <p>Ответы на самые популярные вопросы</p>
+            <div class="services__item">
+                <img class="services__item_img" src="img/ic_question.svg" alt="icon question">
+                <p class="services__item_text">Ответы на самые популярные вопросы</p>
             </div>
         </div>
-        <div>
-            <h2>Остались вопросы?</h2>
-            <form>
-                <input type="text" placeholder="Ваше имя" required>
-                <input type="email" placeholder="Ваш email" required>
-                <textarea placeholder="Ваш вопрос" required></textarea>
+        <div class="responce-form">
+            <h2 class="responce-form__title">Остались вопросы?</h2>
+            <form class="responce-form__form">
+                <input id="name" type="text" placeholder="Ваше имя" required>
+                <input id="email" type="email" placeholder="Ваш email" required>
+                <textarea id="question" placeholder="Ваш вопрос" required></textarea>
                 <button type="button">Получить ответ</button>
             </form>
         </div>
 
-        <div>
-            <div>
-                <span>&times;</span>
-                <p>Спасибо! Мы свяжемся с вами в ближайшее время.</p>
+        <div id="modal" class="modal">
+            <div class="modal__content">
+                <span class="modal__content_close">&times;</span>
+                <p class="modal__content_text">Спасибо! Мы свяжемся с вами в ближайшее время.</p>
             </div>
         </div>
 
