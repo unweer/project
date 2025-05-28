@@ -6,10 +6,12 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link rel="stylesheet" href="styles/styles.css">
         <link rel="stylesheet" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/preloader.css">
         <script src="scripts/script.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     </head>
     <body>
         <div class="preloader">
@@ -30,7 +32,55 @@
                 </div>
                 <a href="auth.html"><img class="header_account-img" src="img/ic_account.svg" alt="icon account"></a>
             </header>
+            
             <div class="services"></div>
+
+            <section class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="card-list_item swiper-slide">
+                        <p class="card-list__item_topic">Тема 1</p>
+                        <p class="card-list__item_question">Вопрос 1</p>
+                    </div>
+
+                    <div class="card-list_item swiper-slide">
+                        <p class="card-list__item_topic">Тема 2</p>
+                        <p class="card-list__item_question">Вопрос 2</p>
+                    </div>
+
+                    <div class="card-list_item swiper-slide">
+                        <p class="card-list__item_topic">Тема 3</p>
+                        <p class="card-list__item_question">Вопрос 3</p>
+                    </div>
+
+                    <div class="card-list_item swiper-slide">
+                        <p class="card-list__item_topic">Тема 4</p>
+                        <p class="card-list__item_question">Вопрос 4</p>
+                    </div>
+
+                    <div class="card-list_item swiper-slide">
+                        <p class="card-list__item_topic">Тема 5</p>
+                        <p class="card-list__item_question">Вопрос 5</p>
+                    </div>
+
+                    <div class="card-list_item swiper-slide">
+                        <p class="card-list__item_topic">Тема 6</p>
+                        <p class="card-list__item_question">Вопрос 6</p>
+                    </div>
+
+                    <div class="card-list_item swiper-slide">
+                        <p class="card-list__item_topic">Тема 7</p>
+                        <p class="card-list__item_question">Вопрос 7</p>
+                    </div>
+
+                    <div class="card-list_item swiper-slide">
+                        <p class="card-list__item_topic">Тема 8</p>
+                        <p class="card-list__item_question">Вопрос 8</p>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </section>
+
             <div id="response" class="responce-form">
                 <h2 class="responce-form__title">Остались вопросы?</h2>
                 <form class="responce-form__form">

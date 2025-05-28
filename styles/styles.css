@@ -203,6 +203,51 @@ footer {
   transform: scaleX(1);
 }
 
+.card-list_item {
+  width: 200px;
+  height: 200px;
+  border: 2px, solid, #9B628B;
+  border-radius: 15%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px
+}
+
+.card-list__item_topic {
+  font-family: "Advent Pro";
+  font-weight: 400;
+  font-size: 35px;
+  color: #9B628B
+}
+
+
+.swiper-wrapper {
+  margin-top: 50px;
+}
+
+.swiper-slide {
+    box-shadow: none;
+    width: 200px;
+    height: 200px;
+}
+.swiper-button-prev,
+.swiper-button-next {
+    color: #9B628B;
+}
+
+.swiper-pagination {
+  margin-top: 50px;
+  position: relative;
+}
+
+.swiper-pagination-bullet-active {
+    background: #9B628B;
+}
+
+.card-list__item_question {
+  font-family: "Advent Pro";
+  font-size: 20px;
+}
 
 @media (max-width: 1200px) {
   .header__info_title {

@@ -72,3 +72,15 @@ if (preloader && content) {
         preloader.remove();
     }, 3000); // Задержка 3 секунды
 }
+
+const swiper = new Swiper('.swiper', {
+  loop: true,  // Бесконечный слайдер
+  slidesPerView: 5,  // Количество видимых слайдов
+  spaceBetween: 40,  // Отступы между слайдами
+
+  // Навигация
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  }
+});
