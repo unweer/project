@@ -1,21 +1,3 @@
-const servicesData = [
-    {
-        icon: "img/ic_scales.svg",
-        alt: "icon scales",
-        text: "Актуальные статьи"
-    },
-    {
-        icon: "img/ic_note.svg",
-        alt: "icon note",
-        text: "Шаблоны исков и обращений"
-    },
-    {
-        icon: "img/ic_question.svg",
-        alt: "icon question",
-        text: "Ответы на самые популярные вопросы"
-    }
-];
-
 function openModal() {
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
@@ -31,23 +13,40 @@ function openModal() {
 }
 
 function closeModal() {
-  console.log('Закрыто модальное окно')
+    console.log('Закрыто модальное окно')
     document.getElementById("modal").style.display = "none";
 }
 
-const servicesContainer = document.querySelector('.services');
+const serviceContainer =  document.querySelector('.services');
+    if (serviceContainer) {
+    const apiUrl = 'data.json';
 
-servicesData.forEach(service => {
-    const serviceItem = document.createElement('div');
-    serviceItem.classList.add('services__item');
+    const serviceItem = (icon, alt, text, id) => {
+        const item = `
+            <div id="${id}"  class="services__item">
+                <img class="services__item_img" src="${icon}" alt="${alt}">
+                <p class="services__item_text">${text}</p>
+            </div>
+        `
 
-    serviceItem.innerHTML = `
-        <img class="services__item_img" src="${service.icon}" alt="${service.alt}">
-        <p class="services__item_text">${service.text}</p>
-    `;
+        return item
+    }
 
-    servicesContainer.appendChild(serviceItem);
-});
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data); // Данные
+            console.log(typeof (data)); // Тип полученных данных
+            data.forEach(item => {
+                const service = serviceItem(item.icon, item.alt, item.text, item.id);
+                serviceContainer.insertAdjacentHTML('beforeend', service);
+            });
+        })  
+        .catch(error => {
+            console.error('Ошибка при загрузке данных:', error);
+        });
+}
+
 
 window.onclick = function(event) {
   console.log('Закрыто модальное окно нажатием в затемнение')
@@ -55,4 +54,21 @@ window.onclick = function(event) {
     if (event.target === modal) {
       closeModal();
     }
+}
+
+// Preloader страницы
+const preloader = document.querySelector('.preloader');
+const content = document.querySelector('.content');
+if (preloader && content) {
+    setTimeout(() => {
+        // Скрываем прелоадер
+        preloader.style.opacity = '0';
+        preloader.style.visibility = 'hidden';
+
+        // Показываем контент
+        content.style.display = 'block';
+
+        // Удаляем элемент из DOM
+        preloader.remove();
+    }, 3000); // Задержка 3 секунды
 }

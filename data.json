@@ -1,0 +1,20 @@
+[
+    {
+        "icon": "img/ic_scales.svg",
+        "alt": "icon scales",
+        "text": "Актуальные статьи",
+        "id": "scales"
+    },
+    {
+        "icon": "img/ic_note.svg",
+        "alt": "icon note",
+        "text": "Шаблоны исков и обращений",
+        "id": "note"
+    },
+    {
+        "icon": "img/ic_question.svg",
+        "alt": "icon question",
+        "text": "Ответы на самые популярные вопросы",
+        "id": "questions"
+    }
+]

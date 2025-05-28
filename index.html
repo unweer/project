@@ -8,43 +8,51 @@
         <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles/styles.css">
         <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/preloader.css">
         <script src="scripts/script.js" defer></script>
     </head>
     <body>
-        <header>
-            <a href="index.html"><img class="header_logo" src="img/logo.png" alt="header logo"></a>
-            <div class="header__info">
-                <h1 class="header__info_title">Юридическая самопомощь</h1>
-                <nav class="header__info_nav">
-                    <a class="header__info__nav_nav-item" href="#scales">Статьи</a>
-                    <a class="header__info__nav_nav-item" href="#note">Шаблоны</a>
-                    <a class="header__info__nav_nav-item" href="#questions">Вопросы</a>
-                    <a class="header__info__nav_nav-item" href="#response">Связаться с нами</a>
-                </nav>
-            </div>
-            <a href="auth.html"><img class="header_account-img" src="img/ic_account.svg" alt="icon account"></a>
-        </header>
-        <div class="services"></div>
-        <div id="response" class="responce-form">
-            <h2 class="responce-form__title">Остались вопросы?</h2>
-            <form class="responce-form__form">
-                <input id="name" type="text" placeholder="Ваше имя" required>
-                <input id="email" type="email" placeholder="Ваш email" required>
-                <textarea id="question" placeholder="Ваш вопрос" required></textarea>
-                <button onclick="openModal()" type="button">Получить ответ</button>
-            </form>
+        <div class="preloader">
+            <div class="preloader__loader"></div>
         </div>
 
-        <div id="modal" class="modal">
-            <div class="modal__content">
-                <span class="modal__content_close" onclick="closeModal()">&times;</span>
-                <p class="modal__content_text">Спасибо! Мы свяжемся с вами в ближайшее время.</p>
+        <div class="content">
+            <header>
+                <a href="index.html"><img class="header_logo" src="img/logo.png" alt="header logo"></a>
+                <div class="header__info">
+                    <h1 class="header__info_title">Юридическая самопомощь</h1>
+                    <nav class="header__info_nav">
+                        <a class="header__info__nav_nav-item" href="#scales">Статьи</a>
+                        <a class="header__info__nav_nav-item" href="#note">Шаблоны</a>
+                        <a class="header__info__nav_nav-item" href="#questions">Вопросы</a>
+                        <a class="header__info__nav_nav-item" href="#response">Связаться с нами</a>
+                    </nav>
+                </div>
+                <a href="auth.html"><img class="header_account-img" src="img/ic_account.svg" alt="icon account"></a>
+            </header>
+            <div class="services"></div>
+            <div id="response" class="responce-form">
+                <h2 class="responce-form__title">Остались вопросы?</h2>
+                <form class="responce-form__form">
+                    <input id="name" type="text" placeholder="Ваше имя" required>
+                    <input id="email" type="email" placeholder="Ваш email" required>
+                    <textarea id="question" placeholder="Ваш вопрос" required></textarea>
+                    <button onclick="openModal()" type="button">Получить ответ</button>
+                </form>
             </div>
+
+            <div id="modal" class="modal">
+                <div class="modal__content">
+                    <span class="modal__content_close" onclick="closeModal()">&times;</span>
+                    <p class="modal__content_text">Спасибо! Мы свяжемся с вами в ближайшее время.</p>
+                </div>
+            </div>
+
+            <footer>
+
+            </footer>
         </div>
-
-        <footer>
-
-        </footer>
+        
     </body>
 
 </html>
