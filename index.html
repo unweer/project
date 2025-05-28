@@ -8,6 +8,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles/styles.css">
         <link rel="stylesheet" href="styles/normalize.css">
+        <script src="/scripts/script.js" defer></script>
     </head>
     <body>
         <header>
@@ -45,13 +46,13 @@
                 <input id="name" type="text" placeholder="Ваше имя" required>
                 <input id="email" type="email" placeholder="Ваш email" required>
                 <textarea id="question" placeholder="Ваш вопрос" required></textarea>
-                <button type="button">Получить ответ</button>
+                <button onclick="openModal()" type="button">Получить ответ</button>
             </form>
         </div>
 
         <div id="modal" class="modal">
             <div class="modal__content">
-                <span class="modal__content_close">&times;</span>
+                <span class="modal__content_close" onclick="closeModal()">&times;</span>
                 <p class="modal__content_text">Спасибо! Мы свяжемся с вами в ближайшее время.</p>
             </div>
         </div>
